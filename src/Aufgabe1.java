@@ -20,12 +20,22 @@ public class Aufgabe1 {
         }
         System.out.println(":");
         //c)
-        for (int i = 71 - 1; i > 51; i--) {
-            if(i - 1 == 51){
+        for (int i = 71 - 1; i >= 51; i--) {
+            if(i == 71 - 1){
                 System.out.print((char)i);
+            }else{
+                System.out.print("," + (char) i);
             }
-            System.out.print("," + (char) i);
         }
         System.out.println();
+        //d)
+        String line = "Zehn zahme Ziegen zogen ziemlich z¨ugig zehn Zentner Zucker zum Zoo!";
+        int counter = 0;
+        for (int i = 0; i < line.length(); i++) {
+            if (line.charAt(i) == 'Z' || line.charAt(i) == 'z'){
+                counter++;
+            }
+        }
+        System.out.println(counter);
     }
 }
